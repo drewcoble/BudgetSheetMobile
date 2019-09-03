@@ -33,6 +33,7 @@ input {
 
 .txtInput {
   width: 150px;
+  letter-spacing: 1px;
 }
 
 .inputTable {
