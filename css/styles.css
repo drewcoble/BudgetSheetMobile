@@ -88,7 +88,8 @@ input {
 .dataBox {
   font-size: 14px;
   padding: 5px 10px 5px 25px;
-  background-image: linear-gradient(to right, lightgreen, lightskyblue);
+  background-color: #212f45;
+  //background-image: linear-gradient(to right, lightgreen, lightskyblue);
   margin: 0px;
 }
 
@@ -101,7 +102,8 @@ input {
   padding: 0px;
   overflow-x: scroll;
   margin-bottom: 0px;
-  background-image: linear-gradient(to right, lightgreen, lightskyblue);
+  background-color: #212f45;
+  //background-image: linear-gradient(to right, lightgreen, lightskyblue);
 }
 
 #btnBudget {
