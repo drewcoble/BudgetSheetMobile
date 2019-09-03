@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="icon" href="money-icon2.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link href="https://fonts.googleapis.com/css?family=Manjari|Raleway&display=swap" rel="stylesheet">
 
     </head>
     <body>
@@ -11,7 +12,7 @@
             <div class="dataBox">
                 <h3>Bills</h3>
 
-                <table class="inputTable">
+                <table class="inputTable" id="billsInputTable">
 
                     <tr>
                         <th>Starting Amount:</th>
@@ -223,13 +224,13 @@
 
                     <tr>
                         <td class="catCat"><span id="customCategoryNameOut"></span></td>
-                        <td class="catAmount"><input class="category" id="customCategoryBudget" placeholder="$50?" type="number" /></td>
+                        <td class="catAmount"><input class="category" id="customCategoryBudget" placeholder="$50" type="number" /></td>
                         <td class="catCheck"><input type="checkbox" id="customCashCheck" class="checkBoxStyle"></td>
                     </tr>
 
                     <tr>
                         <td colspan="3">
-                            <button style="margin-left: 0px; color: white; font-size: 14px; background-color: rgba(31, 167, 45, 0.5); border: #5a5a5a 0px solid; border-radius: 25px" onclick="toggleNameChangeBox()">
+                            <button style="text-align: left; margin-left: 0px; font-size: 16px; background-color: rgba(117, 192, 137,0.75); color: #111f35;padding: 5px; border:none; border-radius: 8px" onclick="toggleNameChangeBox()">
                                 <span id="showHideButton">Change Category Name</span>
                             </button>
                         </td>
@@ -381,7 +382,7 @@
                     <td class="fifties"></td>
                     <td class="cashTotal"></td>
                 </tr>
-                <tr class="totalRow">
+                <tr id="totalRow">
                     <td class="cats">Totals</td>
                     <td class="fives"></td>
                     <td class="tens"></td>
@@ -393,11 +394,15 @@
 
             </table>
 
-            <div class="dataBox" style="margin-bottom: 0px;">
+            <div class="dataBox" id="dataContainer" style="margin-bottom: 0px; display: none">
                 <h3>Budget Details</h3>
                 <div id="dvBudgetOut"></div>
             </div>
             <br>
+            <div id="footer">
+                <hr>
+                Budget Sheet Mobile &copy; Drew Coble 2019
+            </div>
 
         </div>
 

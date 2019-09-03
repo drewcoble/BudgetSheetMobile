@@ -17,6 +17,7 @@ var gasBudgetInput = document.querySelector('#gasBudget');
 var coffeeBudgetInput = document.querySelector('#coffeeBudget');
 
 //output
+var dataContainer = document.querySelector('#dataContainer');
 var dvBudgetOut = document.querySelector('#dvBudgetOut');
 //array for table cells
 var tblFives = document.querySelectorAll('.fives');
@@ -42,14 +43,14 @@ function toggleChecked(billDateNumber) {
   let thisBillDateSpan = billDateSpans[billDateNumber];
   console.log(thisBillDateSpan.style.backgroundColor);
   //if the bgColor is white change to dark, also change font color to make legible
-  if (thisBillDateSpan.style.backgroundColor != 'rgba(93, 143, 173, 0.75)') {
-    thisBillDateSpan.style.backgroundColor = 'rgba(93, 143, 173, 0.75)';
-    thisBillDateSpan.style.color = 'rgba(255, 255, 255, 0.75)';
+  if (thisBillDateSpan.style.backgroundColor != 'rgb(117, 192, 137)') {
+    thisBillDateSpan.style.backgroundColor = 'rgb(117, 192, 137)';
+    //thisBillDateSpan.style.color = 'rgba(240, 240, 250, 1)';
   }
   //if the bgColor is dark change to white, also change font color to make legible
   else {
-    thisBillDateSpan.style.backgroundColor = 'rgba(255, 255, 255, 0.75)';
-    thisBillDateSpan.style.color = 'rgba(93, 143, 173, 0.75)';
+    thisBillDateSpan.style.backgroundColor = 'rgba(240, 240, 250, 0.95)';
+    //thisBillDateSpan.style.color = 'rgb(45, 65, 95)';
   }
 }
 
@@ -90,6 +91,11 @@ function changeCategoryName() {
 
 //function to calculate budget
 function budget() {
+  //if the output div isn't showing, show the div
+  if (dataContainer.style.display == 'none') {
+    dataContainer.style.display = 'block';
+  }
+
   //reset the div
   dvBudgetOut.innerHTML = '';
 
