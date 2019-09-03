@@ -1,0 +1,408 @@
+<html>
+    <head>
+        <title>Budget Sheet</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="icon" href="money-icon2.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    </head>
+    <body>
+        <div id="dataEntry">
+            <div class="dataBox">
+                <h3>Bills</h3>
+
+                <table class="inputTable">
+
+                    <tr>
+                        <th>Starting Amount:</th>
+                        <td><input id="strtAmnt" placeholder="What's in the bank?" type="number"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Mariah's Pay:</th>
+                        <td><input id="marPay" placeholder="" type="number"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Drew's Pay:</th>
+                        <td><input id="drewPay" placeholder="" type="number" /></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" id="Tithe" class="checkBoxStyle" onclick="toggleChecked(0)">
+                            <label for="Tithe"><span class="billDate">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;Tithe</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Rent" value="920" onclick="toggleChecked(1)">
+                            <label for="Rent"><span class="billDate">01</span>&nbsp;&nbsp;Rent - $920</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Duke Energy" value="95" onclick="toggleChecked(2)">
+                            <label for="Duke Energy"><span class="billDate">01</span>&nbsp;&nbsp;Duke Energy - $95</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Apple Billing" value="20" onclick="toggleChecked(3)">
+                            <label for="Apple Billing"><span class="billDate">03</span>&nbsp;&nbsp;Apple Billing - $20</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Amazon Prime" value="7" onclick="toggleChecked(4)">
+                            <label for="Amazon Prime"><span class="billDate">08</span>&nbsp;&nbsp;Amazon Prime - $7</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Car Payment" value="185" onclick="toggleChecked(5)">
+                            <label for="Car Payment"><span class="billDate">10</span>&nbsp;&nbsp;Car Payment - $185</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="T-Mobile" value="122" onclick="toggleChecked(6)">
+                            <label for="T-Mobile"><span class="billDate">11</span>&nbsp;&nbsp;T-Mobile - $122</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Franciscan" value="56" onclick="toggleChecked(7)">
+                            <label for="Franciscan"><span class="billDate">10</span>&nbsp;&nbsp;Franciscan - $56</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Xfinity" value="30" onclick="toggleChecked(8)">
+                            <label for="Xfinity"><span class="billDate">14</span>&nbsp;&nbsp;Xfinity - $30</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Netflix" value="14" onclick="toggleChecked(9)">
+                            <label for="Netflix"><span class="billDate">17</span>&nbsp;&nbsp;Netflix - $14</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Hulu" value="45" onclick="toggleChecked(10)">
+                            <label for="Hulu"><span class="billDate">18</span>&nbsp;&nbsp;Hulu - $45</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Navient" value="139" onclick="toggleChecked(11)">
+                            <label for="Navient"><span class="billDate">18</span>&nbsp;&nbsp;Navient - $139</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Compassion Int." value="38" onclick="toggleChecked(12)">
+                            <label for="Compassion Int."><span class="billDate">19</span>&nbsp;&nbsp;Compassion Int. - $38</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Sallie Mae" value="342" onclick="toggleChecked(13)">
+                            <label for="Sallie Mae"><span class="billDate">20</span>&nbsp;&nbsp;Sallie Mae - $342</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Medishare" value="251" onclick="toggleChecked(14)">
+                            <label for="Medishare"><span class="billDate">20</span>&nbsp;&nbsp;Medishare - $251</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input style='display:none' type="checkbox" class="bills checkBoxStyle" id="Esurance" value="128" onclick="toggleChecked(15)">
+                            <label for="Esurance"><span class="billDate">28</span>&nbsp;&nbsp;Esurance - $128</label>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+            
+            <div class="dataBox" id="db2">
+                <h3>Categories</h3>
+
+                <table id="categoryTable">
+
+                    <tr>
+                        <th class="catCat">Category</th>
+                        <th>Amount</th>
+                        <th>Cash</th>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Misc:</td>
+                        <td class="catAmount"><input class="category" id="miscBudget" placeholder="$0" type="number" /></td>
+                        <td class="catCheck"><input type="checkbox" id="miscCheck" class="checkBoxStyle"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Counseling:</td>
+                        <td class="catAmount"><input class="category" id="counsBudget" placeholder="$85" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Groceries:</td>
+                        <td class="catAmount"><input class="category" id="grocBudget" placeholder="$100" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Household:</td>
+                        <td class="catAmount"><input class="category" id="houseBudget" placeholder="$30" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Personal&nbsp;Care:</td>
+                        <td class="catAmount"><input class="category" id="pcBudget" placeholder="$10" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Date Night:</td>
+                        <td class="catAmount"><input class="category" id="dateBudget" placeholder="$40" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Entertainment:</td>
+                        <td class="catAmount"><input class="category" id="entBudget" placeholder="$60" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Cali:</td>
+                        <td class="catAmount"><input class="category" id="caliBudget" placeholder="$20" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Clothing:</td>
+                        <td class="catAmount"><input class="category" id="clothBudget" placeholder="$30" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Spending:</td>
+                        <td class="catAmount"><input class="category" id="spendBudget" placeholder="$30" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Lunch Money:</td>
+                        <td class="catAmount"><input class="category" id="lunchBudget" placeholder="$50" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat"><span id="customCategoryNameOut"></span></td>
+                        <td class="catAmount"><input class="category" id="customCategoryBudget" placeholder="$50?" type="number" /></td>
+                        <td class="catCheck"><input type="checkbox" id="customCashCheck" class="checkBoxStyle"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <button style="margin-left: 0px; color: white; font-size: 14px; background-color: rgba(31, 167, 45, 0.5); border: #5a5a5a 0px solid; border-radius: 25px" onclick="toggleNameChangeBox()">
+                                <span id="showHideButton">Change Category Name</span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr id="newName" style="display: none">
+                        <td class="catCat">New&nbsp;Name:</td>
+                        <td><input class="catAmount" placeholder="New Category Name" id="inputCustomCategoryName" /></td>
+                        <td>
+                            <button class="catCheck" id="btnChangeCategoryName" onclick="changeCategoryName()">OK</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Gas:</td>
+                        <td class="catAmount"><input class="category" id="gasBudget" placeholder="$130" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat">Coffee:</td>
+                        <td class="catAmount"><input class="category" id="coffeeBudget" placeholder="$30" type="number" /></td>
+                        <td class="catCheck"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="catCat" colspan="3">
+                            <input type="checkbox" id="loadDrewCard" checked="true" class="checkBoxStyle">
+                            <label for="loadDrewCard"> Load Drew's Card?</label>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <br>
+                <button id="btnBudget" onclick="budget()">Budget!</button>
+                <br>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="dvBudgetMain">
+            
+            <table id="cashTable">
+                <tr>
+                    <th>Category</th>
+                    <th>5's</th>
+                    <th>10's</th>
+                    <th>20's</th>
+                    <th>50's</th>
+                    <th>Total $</th>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Miscellaneous</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Counseling</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Groceries</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Household</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Personal&nbsp;Care</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Date&nbsp;Night</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Entertainment</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Cali</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Clothing</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Spending</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td class="cats">Lunch&nbsp;Money</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="tblRow">
+                    <td id="tblCustomName" class="cats"></td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+                <tr class="totalRow">
+                    <td class="cats">Totals</td>
+                    <td class="fives"></td>
+                    <td class="tens"></td>
+                    <td class="twenties"></td>
+                    <td class="fifties"></td>
+                    <td class="cashTotal"></td>
+                </tr>
+
+
+            </table>
+
+            <div class="dataBox" style="margin-bottom: 0px;">
+                <h3>Budget Details</h3>
+                <div id="dvBudgetOut"></div>
+            </div>
+            <br>
+
+        </div>
+
+
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
