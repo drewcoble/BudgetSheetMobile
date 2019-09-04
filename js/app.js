@@ -19,6 +19,9 @@ var coffeeBudgetInput = document.querySelector('#coffeeBudget');
 //output
 var dataContainer = document.querySelector('#dataContainer');
 var dvBudgetOut = document.querySelector('#dvBudgetOut');
+var cashTable = document.querySelector('#cashTable');
+var dvBudgetMain = document.querySelector('#dvBudgetMain');
+
 //array for table cells
 var tblFives = document.querySelectorAll('.fives');
 var tblTens = document.querySelectorAll('.tens');
@@ -92,8 +95,9 @@ function changeCategoryName() {
 //function to calculate budget
 function budget() {
   //if the output div isn't showing, show the div
-  if (dataContainer.style.display == 'none') {
+  if (dvBudgetMain.style.display == 'none') {
     dataContainer.style.display = 'block';
+    dvBudgetMain.style.display = 'block';
   }
 
   //reset the div
